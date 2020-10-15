@@ -1,38 +1,122 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
+  justify-content: space-between;
+
+  background-image: url("./components/img/background.jpg");
+  background-repeat: no-repeat;
+
+  height: 1000px;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+/* SECTIONS */
+div[class^="section-"] {
+  background-color: #0c0b0b;
+  padding: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.section-2 p {
+  padding-bottom: 20px;
+}
+
+.section-2 a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 20px;
+  width: 200px;
+  margin: 0 auto;
+  font-size: 18px;
+
+  border-radius: 4px;
+  border: 2px solid #b80f46;
+}
+
+.section-2 a:hover {
+  border: 2px solid #900130;
+  background-color: #900130;
+}
+
+/* END SECTIONS */
+
+/* CALCULATOR STYLES */
+
+.calculator {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 70px 30px 70px 70px 70px;
+  grid-template-columns: 70px 70px 70px 70px;
+
+  box-shadow: 2px 2px 20px #0c0b0b;
+  background-color: #fff;
+
+  height: 450px;
+  width: 280px;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.calculator button {
+  font-size: 20px;
+  cursor: pointer;
+  font-family: -apple-system, "Montserrat", sans-serif;
+  font-weight: 500;
+  border: none;
+}
+
+.btn--num,
+.btn--action,
+.btn--equal {
+  font-size: 25px;
+  width: 70px;
+  height: 70px;
+}
+
+.btn--num:hover,
+.btn--action:hover,
+.btn--zero:hover {
+  background-color: #df7881;
+}
+
+.btn--num:active,
+.btn--action:active,
+.btn--zero:active {
+  transform: scale(0.9);
+}
+
+.btn--num,
+.btn--zero {
+  background-color: #fff;
+}
+
+.btn--zero {
+  width: 140px;
+  height: 70px;
+  font-size: 25px;
+}
+
+.btn--action {
+  background-color: #cdcdcd;
+}
+
+.btn--equal {
+  background-color: #b80f46;
+  color: #fff;
+}
+
+.btn--equal:hover {
+  background-color: #900130;
+  color: #fff;
+}
+
+/* END CALCULATOR STYLES */
